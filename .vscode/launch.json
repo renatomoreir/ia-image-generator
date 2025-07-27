@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "pattern": "started server on",
+        "uriFormat": "http://localhost:%p",
+        "action": "debugWithChrome" // Ou "debugWithEdge"
+      }
+    },
+    {
+      "name": "Next.js: Debug Client",
+      "type": "msedge", //"chrome" Ou "msedge" para Microsoft Edge
+      "request": "attach",
+      "port": 9222, // Porta padrão para depuração de Chrome/Edge
+      "urlFilter": "http://localhost:3000/*",
+      "webRoot": "${workspaceFolder}",
+      "skipFiles": ["node_modules/**"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Next.js: Full Stack Debug",
+      "configurations": ["Next.js: Debug Server", "Next.js: Debug Client"]
+    }
+  ]
+}

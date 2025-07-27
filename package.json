@@ -1,0 +1,58 @@
+{
+  "name": "ai-image-generator",
+  "version": "1.0.0",
+  "description": "Uma aplicação web moderna para geração de imagens usando inteligência artificial",
+  "author": "Renato Costa Moreira",
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "image-generation",
+    "nextjs",
+    "react",
+    "typescript",
+    "bootstrap",
+    "stable-diffusion"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renatomoreir"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "docker:build": "docker build -t ai-image-generator .",
+    "docker:run": "docker run -p 3000:3000 ai-image-generator",
+    "docker:compose": "docker-compose up -d",
+    "docker:compose:down": "docker-compose down"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/uuid": "^10.0.0",
+    "bootstrap": "^5.3.7",
+    "lucide-react": "^0.525.0",
+    "next": "15.4.4",
+    "react": "19.1.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "19.1.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
